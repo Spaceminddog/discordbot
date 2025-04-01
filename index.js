@@ -3,9 +3,14 @@ const { REST } = require('@discordjs/rest');
 require('dotenv').config();
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ],
   partials: [Partials.Channel]
 });
+
 
 const commands = [
   {
