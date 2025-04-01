@@ -72,7 +72,7 @@ client.on('interactionCreate', async (interaction) => {
     const url = interaction.fields.getTextInputValue('url');
     const description = interaction.fields.getTextInputValue('description');
 
-    const channel = interaction.guild.channels.cache.get('YOUR_CHANNEL_ID');
+    const channel = interaction.guild.channels.cache.get('1356627556333261004');
     const timestamp = new Date().toLocaleString('hu-HU', { timeZone: 'Europe/Budapest' });
     const creator = interaction.user.username;
 
@@ -95,7 +95,7 @@ client.on('interactionCreate', async (interaction) => {
 client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
 
-  const targetChannelId = 'YOUR_CHANNEL_ID';
+  const targetChannelId = '1356627556333261004';
   if (message.channel.id === targetChannelId) {
     try {
       await message.delete();
