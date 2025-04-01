@@ -88,4 +88,22 @@ client.on('interactionCreate', async (interaction) => {
   }
 });
 
+client.on('messageCreate', async (message) => {
+  // Ignore messages from bots
+  if (message.author.bot) return;
+
+  // Define the channel ID where this rule should apply
+  const targetChannelId = 'YOUR_CHANNEL_ID';
+
+  if (message.channel.id === targetChannelId) {
+    try {
+      await message.delete();
+      console.log(`Deleted message from ${message.author.username} in #newcontent`);
+    } catch (err) {
+      console.error('Failed to delete message:', err);
+    }
+  }
+});
+
+
 client.login(process.env.TOKEN);
