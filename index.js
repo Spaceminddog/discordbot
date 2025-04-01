@@ -93,7 +93,7 @@ client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
 
   // Define the channel ID where this rule should apply
-  const targetChannelId = 'YOUR_CHANNEL_ID';
+  const targetChannelId = '1356627556333261004';
 
   if (message.channel.id === targetChannelId) {
     try {
